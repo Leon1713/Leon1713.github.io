@@ -1,10 +1,6 @@
 
 // Dark Mode Toggle
-const toggleBtn = document.getElementById('darkModeToggle');
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀' : '☾';
-});
+
 
 // Booking Confirmation Popup
 const form = document.querySelector('.booking-form');
@@ -15,6 +11,36 @@ if (form) {
         form.reset();
     });
 }
+
+function test() {
+    const hamburger = document.getElementById("hamburger");
+    const hamburgerMenu = document.getElementById("hamburger-menu-container");
+    const svg = document.getElementById("hamburgerDiv");
+    if (hamburger.classList.length > 0) {
+        hamburger.classList.remove("active");
+        hamburgerMenu.classList.add("hamburger-menu-inactive")
+        hamburgerMenu.classList.remove("hamburger-menu-active")
+    }
+    else {
+        hamburger.classList.add("active");
+        hamburgerMenu.classList.add("hamburger-menu-active")
+        hamburgerMenu.classList.remove("hamburger-menu-inactive")
+    }
+
+}
+
+const links = document.querySelectorAll("a");
+links.forEach(link => {
+    console.log(link.href);
+    if (link.href === window.location.href) {
+        link.classList.add("isActive");
+    }
+    else {
+        if (link.classList.contains("isActive")) {
+            link.classList.remove("isActive");
+        }
+    }
+})
 
 // Scroll Fade-In Animation
 const fadeElements = document.querySelectorAll('.testimonials, .footer');
