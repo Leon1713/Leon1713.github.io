@@ -195,11 +195,11 @@ function seeStatus(status) {
 
 function removeStatus() {
     const bookingStatus = document.getElementsByClassName("booking-status");
-
-    for (var status of bookingStatus) {
+    
+   let status = bookingStatus[myMap.get(currSelectedCar)]; 
         status.classList.remove("booking-active")
         status.classList.remove("booking-return")
         status.classList.remove("booking-complete")
         status.classList.remove("booking-cancel")
-    }
+    
 }
