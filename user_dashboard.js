@@ -174,6 +174,8 @@ function pay() {
     removeStatus();
     bookingStatus[myMap.get(currSelectedCar)].classList.add("booking-complete");
     bookingStatus[myMap.get(currSelectedCar)].children[0].innerText = userData[currSelectedCar].status;
+    
+    localStorage.setItem("user-data", JSON.stringify(userData));
     closeB();
 }
 
@@ -200,5 +202,4 @@ function removeStatus() {
         status.classList.remove("booking-complete")
         status.classList.remove("booking-cancel")
     }
-
 }
