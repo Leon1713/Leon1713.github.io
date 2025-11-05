@@ -41,6 +41,8 @@ function initializePaymentPage() {
 function formSubmitEvent(event) {
     event.preventDefault()
     writeToDatabase();
+    alert("redirecting to dashboard");
+    window.location.href = "user_dashboard.html";
 }
 
 function updateCost() {
@@ -68,4 +70,5 @@ function updateCost() {
     taxAmount.innerText = "$" + (((dayElasped * carData[i].price) * 10) / 100).toFixed(2).toString();
     total.innerText = "$" + ((dayElasped * carData[i].price) * 1.10).toFixed(2).toString();
     paymentBtn.innerText = "Complete Payment - " + total.innerText;
+
 }
