@@ -1,0 +1,346 @@
+.rental-management {
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.back-container {
+    display: flex;
+    padding: 0;
+}
+
+.process-heading-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.process-heading-text-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.process-heading-text-logo h3 {
+    font-size: 2rem;
+    font-weight: 350;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.booking-status {
+    background-color: #e8f9f7;
+    border-radius: 20px;
+}
+
+.booking-status p {
+    padding: .3rem .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4ba5c0;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.booking-status.booking-active {
+    background-color: #e8f9ef;
+    border-radius: 20px;
+}
+
+.booking-status.booking-active p {
+    padding: .3rem .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #15803d;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.booking-status.booking-return {
+    background-color: #f5e8bc;
+    border-radius: 20px;
+}
+
+.booking-status.booking-return p {
+    padding: .3rem .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ff8800;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.booking-status.booking-complete {
+    background-color: #ebebee;
+    border-radius: 20px;
+}
+
+.booking-status.booking-complete p {
+    padding: .3rem .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #c9c8c8;
+    font-weight: 600;
+    font-size: .9rem;
+}
+.booking-status.booking-cancel {
+    background-color: #f8d8d8;
+    border-radius: 20px;
+}
+
+.booking-status.booking-cancel p {
+    padding: .3rem .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ff0000;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.booking-id {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.progress-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    padding: 1rem;
+}
+
+.progress-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.progress-mid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(235, 235, 236);
+    height: 12px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    transition: all 0.5s ease-in;
+    border-radius: 10px;
+}
+
+.progress-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+.highlight
+{
+    color: rgba(0, 0, 0, 1);
+
+}
+
+.progress-tab-superctn {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+
+}
+
+.progress-tab-content-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.progress-tab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: center;
+    border: solid rgba(0, 0, 0, 0.2) 1px;
+    border-radius: 6px;
+}
+
+.progress-tab-grid button {
+    border: transparent 2px solid;
+    padding: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.progress-tab-grid button:focus {
+    background-color: rgba(241, 241, 241, 0.6);
+    border-bottom: black 2px solid;
+}
+
+.progress-content-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.progress-content-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    padding: 1rem;
+}
+
+.progress-content-heading {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.progress-content-label {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: small;
+}
+
+.vehicle-status-ctn {
+    display: flex;
+    flex-direction: row;
+}
+
+.vehicle-status-ctn p {
+    background-color: #e8f9ef;
+    border-radius: 10px;
+    padding: .3rem .7rem;
+    color: #15803d;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.rental-action-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.2rem 1rem;
+    border-radius: 9px;
+}
+
+.buttonFocus {
+    opacity: 1;
+    color: white;
+    background-color: black;
+}
+
+.buttonNotFocus {
+    opacity: 0.2;
+}
+
+.pad-1 {
+    padding: 1rem;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+}
+
+.vehicle-inspect-btn-container button {
+    padding: .75rem 1rem;
+    border-radius: 9px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.inspectList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inspect-entry {
+    padding: 1rem;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: smaller;
+}
+.entry-left
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:0.3rem;
+}
+.inspect-condition, .inspect-damage, .inspect-note,.inspect-repair
+{
+    color:rgba(0, 0, 0, 0.5);
+}
+.entry-right
+{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 0.3rem;
+}
+
+.quick-action
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    height: fit-content;
+    border-radius: 9px;
+
+}
+.quick-action-buttons button 
+{
+    width: 100%;
+    padding: .75rem 1rem;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    border-radius: 9px;
+}
+.animateOverview
+{
+    animation: ScrollUp 1s ease-in;
+}
+.invinsible
+{
+    opacity: 0;
+}
+@keyframes ScrollUp {
+     0% {
+         opacity: 0;
+         transform: translateY(80%);
+     }
+
+     20% {
+         opacity: 0;
+     }
+
+     50% {
+         opacity: 1;
+         transform: translateY(0%);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0%);
+     }
+ }

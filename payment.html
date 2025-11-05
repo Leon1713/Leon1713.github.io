@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="A2_Style.css">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay hide" id="login-overlay">
+        <div class="login-mode">
+            <div class="dialog-header">
+                <h2 class="dialog-title">Choose Login Type</h2>
+            </div>
+            <button class="dialog-close" id="closeDialog" onclick="setLogin()">&times;</button>
+            <div class="login-type">
+                <button class="customer-login">
+                    <svg class="customer-login-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Customer Login
+                </button>
+                <button class="Employee-Login" onclick="location.href='A2_Employee_Landing.html';">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Employee Login
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="Logo">
+                AZone
+            </a>
+            <nav class="nav-container">
+                <a href="index.html" class="nav-link notFocus">Home</a>
+                <a href="#" class="nav-link notFocus">About Us</a>
+                <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+                <a href="#" class="nav-link notFocus">Contact Us</a>
+                <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link notFocus hide">Dashboard</a>
+                <button class="login" onclick="setLogin()">Login</button>
+                <div class="is-login hide" id="login-message">
+                    <p class="login-message">Welcome, username</p>
+                    <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+                </div>
+            </nav>
+            <button id="hamburger" onclick="test()">
+                <div id="hamburgerDiv" class="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div id="hamburger-menu-container" class="hamburger-menu-inactive">
+            <a href="#" class="nav-link notFocus">Home</a>
+            <a href="#" class="nav-link notFocus">About Us</a>
+            <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+            <a href="#" class="nav-link notFocus">Contact Us</a>
+            <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link notFocus hide">Dashboard</a>
+            <button class="login" onclick="setLogin()">Login</button>
+            <div class="is-login hide" id="login-message">
+                <p class="login-message">Welcome, username</p>
+                <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </header>
+    <section class="payment-section">
+        <a class="car-back-btn" onclick="back()">
+            <i data-lucide="arrow-left"></i>
+            <p>Back to car details</p>
+        </a>
+        <div class="payment-hero">
+            <h1>Complete Your Reservation</h1>
+            <div class="payment-divider"></div>
+            <p class="animateOnScroll">Secure your Lamborghini Huracan Evo rental with our encrypted payment system</p>
+        </div>
+        <div class="payment-content">
+            <div>
+                <div class="summary-ctn animateOnScroll">
+                    <div class="summary">
+                        <p>Rental Summary</p>
+                    </div>
+                    <div class="summary-image" id="summary-image-ctn">
+                        <img data-source-location="src/components/pages/PaymentPage.tsx:280:18"
+                            src="https://static.wixstatic.com/media/9519c4_afdd2796e7bd4ce3a4879d3e455c2795~mv2.png/v1/fill/w_537,h_403,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9519c4_afdd2796e7bd4ce3a4879d3e455c2795~mv2.png"
+                            alt="Lamborghini Huracan Evo" class="summary-img" width="300" data-dynamic="alt src"
+                             id="car-img">
+                    </div>
+                    <div class="summary-name">
+                        <div class="summary-name-top">
+                            <p id="car-brand-s" class="car-brand">LAMBORGHINI</p>
+                            <p id="car-name-s" class="car-name">Huracan Evo</p>
+                        </div>
+                        <div class="summary-name-bot">
+                            <p id="car-type-s">Supercar</p>
+                        </div>
+                    </div>
+                    <div class="content-divider"></div>
+                    <div class="summary-details">
+                        <div class="details-part">
+                            <p>Daily Rate:</p>
+                            <p id="daily-rate">$1800</p>
+                        </div>
+                        <div class="details-part">
+                            <p>Days:</p>
+                            <p id="duration">0</p>
+                        </div>
+                        <div class="details-part">
+                            <p>Subtotal:</p>
+                            <p id="subtotal">$1800</p>
+                        </div>
+                        <div class="details-part">
+                            <p>Tax (10%):</p>
+                            <p id="tax">$180</p>
+                        </div>
+                    </div>
+                    <div class="content-divider"></div>
+                    <div class="final-summary">
+                        <p>Total:</p>
+                        <p id="total-cost">$1980.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="details-super-ctn">
+                <form class="details-ctn" onsubmit="formSubmitEvent(event)">
+                    <div class="details-card animateOnScroll">
+                        <div class="card-header">
+                            <i data-lucide="user"></i>
+                            <p>Personal Information</p>
+                        </div>
+                        <div class="details-grid">
+                            <div class="input-detail-ctn">
+                                <label for="fname">First Name</label>
+                                <input id="fname" type="text" required>
+                            </div>
+                            <div class="input-detail-ctn">
+                                <label for="lname">Last Name</label>
+                                <input id="lname" type="text" required>
+                            </div>
+                            <div class="input-detail-ctn">
+                                <label for="email-input">Email</label>
+                                <input id="email-input" type="email" required>
+                            </div>
+                            <div class="input-detail-ctn">
+                                <label for="phone-input">Phone</label>
+                                <input id="phone-input" type="number" pattern="(6|8|9)\d{7}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-card animateOnScroll">
+                        <div class="card-header">
+                            <i data-lucide="calendar"></i>
+                            <p>Rental details</p>
+                        </div>
+                        <div class="details-col">
+                            <div class="details-row">
+                                <div class="input-detail-ctn">
+                                    <label for="startDate">Start Date</label>
+                                    <input id="startDate" type="date" onchange="updateCost()" required>
+                                </div>
+                                <div class="input-detail-ctn">
+                                    <label for="endDate">End Date</label>
+                                    <input id="endDate" onchange="updateCost()" type="date" min="" required>
+                                </div>
+                            </div>
+                            <div class="details-row">
+                                <div class="input-detail-ctn">
+                                    <label for="pickupLocation">Pick up</label>
+                                    <select id="pickupLocation">
+                                        <option>Select Office</option>
+                                        <option>14 Greenmead Ave, Singapore 289406</option>
+                                        <option>230 Orchard Road 10-234/236 Faber House</option>
+                                        <option>Boat Quay Shop Houses 85 Circular Road</option>
+
+                                    </select>
+                                </div>
+                                <div class="input-detail-ctn">
+                                    <label for="dropoffLocation">Drop Off</label>
+                                    <select id="dropoffLocation"  required>
+                                        <option>Select Carpark</option>
+                                        <option>Henderson CC</option>
+                                        <option>Tanjong Pagar CC</option>
+                                        <option>Tanjong Rhu CC</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-card animateOnScroll">
+                        <div class="card-header">
+                            <i data-lucide="credit-card"></i>
+                            <p>Payment Information</p>
+                        </div>
+                        <div class="details-col">
+                            <div class="input-detail-ctn">
+                                <label for="cardholderName">Cardholder Name</label>
+                                <input id="cardholderName" type="text" required>
+                            </div>
+                            <div class="input-detail-ctn">
+                                <label for="cardNumber">Card Number</label>
+                                <input id="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                    autocomplete="cc-number" maxlength="19" placeholder="4218 1234 4444 1223" required>
+                            </div>
+                            <div class="details-row">
+                                <div class="input-detail-ctn">
+                                    <label for="expiryDate">Expiry Date</label>
+                                    <input id="expiryDate" type="text" autocomplete="cc-exp" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="input-detail-ctn">
+                                    <label for="cvv">CVV</label>
+                                    <input id="cvv" type="tel" inputmode="numeric" autocomplete="cc-csc" maxlength="3"
+                                        placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="input-detail-ctn">
+                                <label for="billingAddress">Billing Address</label>
+                                <input id="billingAddress" type="text" autocomplete="street-address" required>
+                            </div>
+                            <div class="details-row">
+                                <div class="input-detail-ctn">
+                                    <label for="city">City</label>
+                                    <input id="city" type="text" autocomplete="country" required>
+                                </div>
+                                <div class="input-detail-ctn">
+                                    <label for="zipCode">Zip Code</label>
+                                    <input id="zipCode" type="number" inputmode="numeric" autocomplete="postal-code"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer animateOnScroll">
+                        <div class="form-footer-message">
+                            <i data-lucide="lock"></i>
+                            <p>Your payment information is encrypted and secure</p>
+                        </div>
+                        <button type="submit" class="pay-btn" id="payment-btn">Complete Payment - $0.00</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container animateOnScroll">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">VELOCITY</h3>
+                    <p class="footer-description">
+                        Redefining luxury car rental with unparalleled service and the world's finest supercars.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Supercar Rental</a></li>
+                        <li><a href="index.html" class="footer-link">Track Day Experiences</a></li>
+                        <li><a href="index.html" class="footer-link">Event Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="index.html" class="footer-link">Rental Terms</a></li>
+                        <li><a href="index.html" class="footer-link">Insurance Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">hello@velocity.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">Beverly Hills, CA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Velocity Luxury Rentals. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="initLucide.js"></script>
+<script src="animate.js"></script>
+<script src="common.js"></script>
+<script src="fetchUser.js"></script>
+<script src="payment.js"></script>
+
+</html>

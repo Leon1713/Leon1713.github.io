@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="A2_Style.css">
+    <link rel="stylesheet" href="rental_process.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay hide" id="login-overlay">
+        <div class="login-mode">
+            <div class="dialog-header">
+                <h2 class="dialog-title">Choose Login Type</h2>
+            </div>
+            <button class="dialog-close" id="closeDialog" onclick="setLogin()">&times;</button>
+            <div class="login-type">
+                <button class="customer-login">
+                    <svg class="customer-login-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Customer Login
+                </button>
+                <button class="Employee-Login" onclick="location.href='A2_Employee_Landing.html';">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Employee Login
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="Logo">
+                AZone
+            </a>
+            <nav class="nav-container">
+                <a href="index.html" class="nav-link notFocus">Home</a>
+                <a href="#" class="nav-link notFocus">About Us</a>
+                <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+                <a href="#" class="nav-link notFocus">Contact Us</a>
+                <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link focus hide">Dashboard</a>
+                <button class="login" onclick="setLogin()">Login</button>
+                <div class="is-login hide" id="login-message">
+                    <p class="login-message">Welcome, username</p>
+                    <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+                </div>
+            </nav>
+            <button id="hamburger" onclick="test()">
+                <div id="hamburgerDiv" class="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div id="hamburger-menu-container" class="hamburger-menu-inactive">
+            <a href="#" class="nav-link notFocus">Home</a>
+            <a href="#" class="nav-link notFocus">About Us</a>
+            <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+            <a href="#" class="nav-link notFocus">Contact Us</a>
+            <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link focus hide">Dashboard</a>
+            <button class="login" onclick="setLogin()">Login</button>
+            <div class="is-login hide" id="login-message">
+                <p class="login-message">Welcome, username</p>
+                <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </header>
+    <section class="rental-management">
+        <div class="back-container">
+            <a href="A2_Rental_Dashboard.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-left mr-2 h-4 w-4"
+                    data-source-location="src/components/pages/CarDetailPage.tsx:166:10">
+                    <path d="m12 19-7-7 7-7"></path>
+                    <path d="M19 12H5"></path>
+                </svg>
+                Back to Dashboard
+            </a>
+        </div>
+        <div class="process-heading-ctn">
+            <div class="process-heading-text-logo">
+                <h3>Rental Process Management</h3>
+                <div class="booking-status">
+                    <p id="book-status">placeHolder</p>
+                </div>
+            </div>
+            <p class="booking-id">Booking: <span id="book-id">bookId</span></p>
+        </div>
+        <div class="progress-ctn">
+            <div class="progress-top">
+                <p>Rental Progress</p>
+                <p id="rental-progress">25% Complete</p>
+            </div>
+            <div class="progress-mid">
+                <div class="progress-bar" id="progress-filler"></div>
+            </div>
+            <div id ="progress-parent" class="progress-status">
+                <p class="highlight">Booked</p>
+                <p>Active</p>
+                <p>Returned</p>
+                <p>Completed</p>
+            </div>
+        </div>
+        <div class="progress-tab-superctn">
+            <div class="progress-tab-content-ctn">
+                <div class="progress-tab-grid">
+                    <button class="progress-list" data-tab="overview-tab" onclick="toggle(this.dataset.tab)">
+                        Overview
+                    </button>
+                    <button class="progress-list" data-tab="process-tab" onclick="toggle(this.dataset.tab)">
+                        Process
+                    </button>
+                    <button class="progress-list" data-tab="inspect-tab" onclick="toggle(this.dataset.tab)">
+                        Inspection
+                    </button>
+                </div>
+                <div class="progress-content-ctn" id="overview-tab">
+                    <div class="progress-content-card">
+                        <div class="progress-content-heading">
+                            <i data-lucide="user"></i>
+                            <p>Customer Information</p>
+                        </div>
+                        <div class="content-grid">
+                            <div class="progress-content">
+                                <p class="progress-content-label">Name</p>
+                                <p id="name">James Ho</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Email</p>
+                                <p id="email">James Ho</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Phone</p>
+                                <p id="phoneNo">-</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Final Cost</p>
+                                <p id="final-cost">$2300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-content-card ">
+                        <div class="progress-content-heading">
+                            <i data-lucide="Car"></i>
+                            <p>Vehicle Details</p>
+                        </div>
+                        <div class="content-grid">
+                            <div class="progress-content">
+                                <p class="progress-content-label">Vehicle</p>
+                                <p id="vehicle-name">James Ho</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Category</p>
+                                <p id="vehicle-category">Super Car</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Daily Rate</p>
+                                <p id="cost-perday">$1200</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Status</p>
+                                <div class="vehicle-status-ctn">
+                                    <p id="vehicle-status-id">Avaliable</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-content-card">
+                        <div class="progress-content-heading">
+                            <i data-lucide="calendar"></i>
+                            <p>Rental Period</p>
+                        </div>
+                        <div class="content-grid">
+                            <div class="progress-content">
+                                <p class="progress-content-label">Start Date</p>
+                                <p id="start-date">SomeDate</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">End Date</p>
+                                <p id="end-date">SomeDate</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Pick Up</p>
+                                <p id="pickUpLocation">Address</p>
+                            </div>
+                            <div class="progress-content">
+                                <p class="progress-content-label">Drop Off</p>
+                                <p id="dropOffLocation">Address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-content-ctn hide" id="process-tab">
+                    <div class="progress-content-card">
+                        <div class="progress-content-heading">
+                            <p>Rental Actions</p>
+                        </div>
+                        <div class="content-grid">
+                            <button id="start-rent-btn" class="rental-action-button buttonNotFocus" data-action="rent"
+                                onclick="processRent(this)">
+                                <i data-lucide="circle-check-big"></i>
+                                <p>Start Rental</p>
+                            </button>
+                            <button class="rental-action-button buttonNotFocus" data-action="return"
+                                onclick="processRent(this)">
+                                <i data-lucide="clock"></i>
+                                <p>Marked as Returned</p>
+                            </button>
+                            <button class="rental-action-button buttonNotFocus" data-action="complete"
+                                onclick="processRent(this)">
+                                <i data-lucide="circle-check-big"></i>
+                                <p>Complete Rental</p>
+                            </button>
+                            <button class="rental-action-button cancelBook" data-action="cancel"
+                                onclick="processRent(this)">
+                                <i data-lucide="circle-alert"></i>
+                                <p>Cancel Booking</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-content-ctn pad-1 hide" id="inspect-tab">
+                    <div class="progress-content-heading">
+                        <p>Vehicle Inspection</p>
+                    </div>
+                    <div class ="vehicle-inspect-btn-container">
+                        <button onclick="doInspection()">Perform Inspection</button>
+                    </div>
+                    <div class="inspectList" id="inspect-list">
+                        <div class="inspect-entry">
+                            <div class="entry-left">
+                                <p class="entry-date">11/4/25</p>
+                                <p class="inspect-condition">Condition: good</p>
+                                <p class="inspect-damage">Damages: minor scratch on vehicle</p>
+                                <p class="inspect-note">Notes: kill me now</p>
+                            </div>
+                            <div class="entry-right">
+                                <p class="inspect-cost">$0</p>
+                                <p class="inspect-repair">Repair Cost</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-action">
+                <div class="quick-action-heading">
+                    <p>Quick Actions</p>
+                </div>
+                <div class="quick-action-buttons">
+                    <button onclick="window.location.href =`A2_Rental_Dashboard.html`;">View All Bookings</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="initLucide.js"></script>
+<script src="animate.js"></script>
+<script src="fetchUser.js"></script>
+<script src="common.js"></script>
+<script src="rental_process.js"></script>
+
+</html>

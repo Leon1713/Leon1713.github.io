@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="A2_Style.css">
+    <link rel="stylesheet" href="how.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay hide" id="login-overlay">
+        <div class="login-mode">
+            <div class="dialog-header">
+                <h2 class="dialog-title">Choose Login Type</h2>
+            </div>
+            <button class="dialog-close" id="closeDialog" onclick="setLogin()">&times;</button>
+            <div class="login-type">
+                <button class="customer-login">
+                    <svg class="customer-login-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Customer Login
+                </button>
+                <button class="Employee-Login" onclick="location.href='A2_Employee_Landing.html';">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Employee Login
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="Logo">
+                AZone
+            </a>
+            <nav class="nav-container">
+                <a href="index.html" class="nav-link notFocus">Home</a>
+                <a href="#" class="nav-link notFocus">About Us</a>
+                <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+                <a href="#" class="nav-link notFocus">Contact Us</a>
+                <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link focus hide">Dashboard</a>
+                <button class="login" onclick="setLogin()">Login</button>
+                <div class="is-login hide" id="login-message">
+                    <p class="login-message">Welcome, username</p>
+                    <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+                </div>
+            </nav>
+            <button id="hamburger" onclick="test()">
+                <div id="hamburgerDiv" class="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div id="hamburger-menu-container" class="hamburger-menu-inactive">
+            <a href="#" class="nav-link notFocus">Home</a>
+            <a href="#" class="nav-link notFocus">About Us</a>
+            <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+            <a href="#" class="nav-link notFocus">Contact Us</a>
+            <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link focus hide">Dashboard</a>
+            <button class="login" onclick="setLogin()">Login</button>
+            <div class="is-login hide" id="login-message">
+                <p class="login-message">Welcome, username</p>
+                <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </header>
+    <section class="More-info-heading">
+        <div class="info-title-div">
+            <h1 class="info-title">
+                Pickup & Return Process
+            </h1>
+            <p class="info-subtext">Experience a seamless rental process designed for your convenience. From pickup to
+                return, we ensure
+                every step is smooth and professional.</p>
+        </div>
+    </section>
+    <section class="vehicle-pick-up bgCol">
+        <div class="pickup-heading-ctn">
+            <h1 class="pickup-title">
+                Vehicle Pickup Process
+            </h1>
+            <p class="pickup-sub">
+                Our streamlined pickup process ensures you get on the road quickly and confidently
+            </p>
+        </div>
+        <div class="pickup-info-grid">
+            <div class="pickup-info-card animateOnScroll">
+                <i data-lucide="Car"></i>
+                <p class="step-heading">Step 1</p>
+                <p class="step-title">Rent a car on website</p>
+                <p class="step-info">Select a car from the website and reserve it with a valid credit or debit card.</p>
+            </div>
+            <div class="pickup-info-card animateOnScroll">
+                <i data-lucide="thumbs-up"></i>
+                <p class="step-heading">Step 2</p>
+                <p class="step-title">Vehicle Inspection</p>
+                <p class="step-info">Together, we'll conduct a thorough inspection of your chosen vehicle. We'll
+                    document any existing conditions and explain all features.</p>
+            </div>
+            <div class="pickup-info-card animateOnScroll">
+                <i data-lucide="key"></i>
+                <p class="step-heading">Step 3</p>
+                <p class="step-title">Keys & Departure</p>
+                <p class="step-info">Receive your keys, emergency contact information, and 24/7 roadside assistance
+                    details. You're ready to enjoy your luxury experience!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vehicle-pick-up">
+        <div class="pickup-heading-ctn">
+            <h1 class="pickup-title">
+                Vehicle Return Process
+            </h1>
+            <p class="pickup-sub">
+                Returning your vehicle is just as simple and efficient as the pickup process
+            </p>
+        </div>
+        <div class="pickup-info-grid">
+            <div class="pickup-info-card animateOnScroll">
+                <i data-lucide="Map"></i>
+                <p class="step-heading">Step 1</p>
+                <p class="step-title">Return to Location</p>
+                <p class="step-info">Bring the vehicle back to our office at the agreed time. Please ensure the fuel
+                    level matches the pickup condition.</p>
+            </div>
+            <div class="pickup-info-card animateOnScroll">
+                <i data-lucide="Wrench"></i>
+                <p class="step-heading">Step 2</p>
+                <p class="step-title">Final Inspection</p>
+                <p class="step-info">Our team will inspect the vehicle for any new damage or issues and update your
+                    final bill. This typically takes 10-15 minutes for a thorough check.</p>
+            </div>
+            <div class="pickup-info-card animateOnScroll">
+                <i data-lucide="circle-check-big"></i>
+                <p class="step-heading">Step 3</p>
+                <p class="step-title">Complete Return</p>
+                <p class="step-info">After the inspection is done, the final amount will be billed to your account
+                    automatically. check your account for more info.</p>
+            </div>
+        </div>
+    </section>
+    <section class="Office-location">
+        <div class="pickup-heading-ctn">
+            <h1 class="pickup-title">Our Office Location</h1>
+            <p class="pickup-sub">Visit us at our convenient downtown location for all pickup and return services</p>
+        </div>
+        <div class="address-content-grid">
+            <div class="address-content-left">
+                <div class="address-ctn animateOnScroll">
+                    <div class="address-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="address-title-ctn">
+                        <p class="address-sub-title">Address</p>
+                        <p class="adress-subtext">14 Greenmead Ave, Singapore 289406 </p>
+                    </div>
+                </div>
+                <div class="address-ctn animateOnScroll">
+                    <div class="address-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="address-title-ctn">
+                        <p class="address-sub-title">Address</p>
+                        <p class="adress-subtext">230 Orchard Road 10-234/236 Faber House</p>
+                    </div>
+                </div>
+                <div class="address-ctn animateOnScroll">
+                    <div class="address-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="address-title-ctn">
+                        <p class="address-sub-title">Address</p>
+                        <p class="adress-subtext">Boat Quay Shop Houses 85 Circular Road</p>
+                    </div>
+                </div>
+            </div>
+            <div class="address-content-right">
+                <div class="mapouter animateOnScroll"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=14 Greenmead Ave, Singapore 289406&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:300px;}.gmap_iframe {height:300px!important;}</style></div>
+                <div class="mapouter animateOnScroll"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q= 230 Orchard Road 10-234/236 Faber House&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:300px;}.gmap_iframe {height:300px!important;}</style></div>
+                <div class="mapouter animateOnScroll"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=Boat Quay Shop Houses 85 Circular Road&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:300px;}.gmap_iframe {height:300px!important;}</style></div>
+            </div>
+        </div>
+    </section>
+    <section class="Office-location">
+        <div class="pickup-heading-ctn">
+            <h1 class="pickup-title">Our Car park</h1>
+            <p class="pickup-sub">Park your car at any of the car park for return.</p>
+        </div>
+        <div class="address-content-grid">
+            <div class="address-content-left">
+                <div class="address-ctn animateOnScroll">
+                    <div class="address-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="address-title-ctn">
+                        <p class="address-sub-title">Address</p>
+                        <p class="adress-subtext">500 Bukit Merah Vw, Singapore 159682, Henderson CC  </p>
+                    </div>
+                </div>
+                <div class="address-ctn animateOnScroll">
+                    <div class="address-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="address-title-ctn">
+                        <p class="address-sub-title">Address</p>
+                        <p class="adress-subtext">101 Cantonment Rd, Singapore 089774, Tanjong Pagar CC</p>
+                    </div>
+                </div>
+                <div class="address-ctn animateOnScroll">
+                    <div class="address-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="address-title-ctn">
+                        <p class="address-sub-title">Address</p>
+                        <p class="adress-subtext">51 Kampong Arang Rd, Singapore 438178, Tanjong Rhu CC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="address-content-right">
+                <div class="mapouter animateOnScroll"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=500 Bukit Merah Vw, Singapore 159682&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:300px;}.gmap_iframe {height:300px!important;}</style></div>
+                <div class="mapouter animateOnScroll"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=101 Cantonment Rd, Singapore 089774&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:300px;}.gmap_iframe {height:300px!important;}</style></div>
+                <div class="mapouter animateOnScroll"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=51 Kampong Arang Rd, Singapore 438178&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:300px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:300px;}.gmap_iframe {height:300px!important;}</style></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container animateOnScroll">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">AZOOM</h3>
+                    <p class="footer-description">
+                        Redefining luxury car rental with unparalleled service and the world's finest supercars.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Supercar Rental</a></li>
+                        <li><a href="index.html" class="footer-link">Track Day Experiences</a></li>
+                        <li><a href="index.html" class="footer-link">Event Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="index.html" class="footer-link">Rental Terms</a></li>
+                        <li><a href="index.html" class="footer-link">Insurance Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+65 9123 4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">sales@azoom.sg</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">14 Greenmead Ave, Singapore 289406</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 AZoom Luxury Rentals. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="initLucide.js"></script>
+<script src="common.js"></script>
+<script src="animate.js"></script>
+<script>doObserve();</script>
+
+
+</html>

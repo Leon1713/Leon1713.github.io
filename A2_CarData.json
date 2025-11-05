@@ -1,0 +1,321 @@
+[
+  {
+    "id": "1",
+    "name": "911 Carrera",
+    "brand": "Porsche",
+    "image": "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+    "price": 400,
+    "category": "sports car",
+    "description": "Iconic rear-engined sports car with sharp handling and daily usability.",
+    "longdescription": "The Porsche 911 Carrera combines legendary rear-engine dynamics with everyday usability. Its 3.0L Twin-Turbo Flat-6 engine delivers 385 HP, accelerating from 0-100 km/h in 4.2 seconds. PASM suspension and Sport Chrono enhance driving precision, while lightweight wheels improve agility. Ideal for spirited driving or daily commuting, the 911 Carrera balances performance, comfort, and style.",
+    "specs": {
+      "engine": "3.0L Twin-Turbo Flat-6",
+      "power": "385 HP",
+      "torque": "450 Nm",
+      "transmission": "8-Speed PDK",
+      "drivetrain": "RWD",
+      "0-100 km/h": "4.2 s",
+      "top speed": "293 km/h",
+      "weight": "1,505 kg",
+      "fuel type": "Petrol",
+      "seating": "2+2"
+    },
+    "features": ["Sport Chrono", "PASM", "Lightweight wheels"],
+    "features-description": [
+      "Sport Chrono enhances throttle response and includes launch control for maximum performance.",
+      "Porsche Active Suspension Management (PASM) adjusts damping for comfort or sportiness.",
+      "Lightweight wheels reduce unsprung mass, improving handling and steering precision."
+    ],
+    "gallery": ["https://images-porsche.imgix.net/-/media/974C0AB65D05491CAAC8B705D350128D_162081AFA6E14DABA15B47A567BB7DAB_911-carrera-gts-cockpit-desktop-myt?w=1299&q=85&auto=format", "https://t3.ftcdn.net/jpg/04/90/55/38/360_F_490553898_mnGM4ENa9aEWkKi2Tcu8d9hryPAKd5Jf.jpg", "https://media.istockphoto.com/id/1419988769/photo/porsche-911-turbo-s.jpg?s=612x612&w=0&k=20&c=KdoIXVhnHEJcJkvxHHkOHLyVcq7YtzGBG9QE8uBjI_4="]
+  },
+  {
+    "id": "2",
+    "name": "Huracán EVO",
+    "brand": "Lamborghini",
+    "image": "https://images.unsplash.com/photo-1644650653303-4774812d0334?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+    "price": 2200,
+    "category": "Super car",
+    "description": "Mid-engine V10 supercar focused on raw performance and dramatic design.",
+    "longdescription": "The Lamborghini Huracán EVO is a high-performance mid-engine V10 supercar that fuses extreme speed with aerodynamic mastery. Producing 630 HP and 600 Nm of torque, it rockets from 0-100 km/h in just 2.9 seconds. The ALA aerodynamic system dynamically adjusts downforce, while LDVI predicts driver inputs to optimize handling. Optional carbon fiber interiors enhance a lightweight, race-inspired cabin.",
+    "specs": {
+      "engine": "5.2L Naturally Aspirated V10",
+      "power": "630 HP",
+      "torque": "600 Nm",
+      "transmission": "7-Speed DCT",
+      "drivetrain": "AWD",
+      "0-100 km/h": "2.9 s",
+      "top speed": "325 km/h",
+      "weight": "1,422 kg",
+      "fuel type": "Petrol",
+      "seating": "2"
+    },
+    "features": ["Ala aerodynamics", "LDVI drive logic", "Carbon interior options"],
+    "features-description": [
+      "Aerodinamica Lamborghini Attiva (ALA) dynamically adjusts downforce for optimal cornering.",
+      "LDVI (Lamborghini Dinamica Veicolo Integrata) predicts driver intent to optimize handling.",
+      "Optional carbon fiber interior trim enhances lightweight performance and racing aesthetics."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=Huracan+1"]
+  },
+  {
+    "id": "3",
+    "name": "GTC4Lusso",
+    "brand": "Ferrari",
+    "image": "https://www.carscoops.com/wp-content/uploads/2023/03/Ferrari-GTC4Lusso-Strasse-1a-1024x576.jpg",
+    "price": 1800,
+    "category": "grand tourer",
+    "description": "Four-seat GT blending long-distance comfort with Ferrari performance.",
+    "longdescription": "Ferrari’s GTC4Lusso is a four-seat grand tourer that combines luxury, comfort, and extraordinary performance. Its 6.3L V12 engine delivers 680 HP and 697 Nm of torque, achieving 0-100 km/h in 3.4 seconds. Adaptive suspension ensures smooth, confident handling, while a luxurious leather interior provides the perfect environment for long-distance touring with style.",
+    "specs": {
+      "engine": "6.3L Naturally Aspirated V12",
+      "power": "680 HP",
+      "torque": "697 Nm",
+      "transmission": "7-Speed DCT",
+      "drivetrain": "AWD",
+      "0-100 km/h": "3.4 s",
+      "top speed": "335 km/h",
+      "weight": "1,920 kg",
+      "fuel type": "Petrol",
+      "seating": "4"
+    },
+    "features": ["Four-seat layout", "Adaptive suspension", "Luxury leather interior"],
+    "features-description": [
+      "Spacious four-seat configuration suitable for grand touring with passengers.",
+      "Adaptive suspension continuously adjusts damping for comfort or sport driving.",
+      "Sumptuous leather upholstery hand-stitched by Ferrari’s artisans."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=GTC4Lusso+1"]
+  },
+  {
+    "id": "4",
+    "name": "S-Class Coupe",
+    "brand": "Mercedes-Benz",
+    "image": "https://www.topgear.com/sites/default/files/cars-car/image/2018/05/large-28520-s560coupe.jpg",
+    "price": 950,
+    "category": "lux coupe",
+    "description": "Refined coupe offering luxury appointments and smooth grand cruising.",
+    "longdescription": "The Mercedes-Benz S-Class Coupe offers unmatched luxury, combining elegant design with cutting-edge technology. Its 4.0L Twin-Turbo V8 produces 469 HP and 700 Nm of torque, with smooth RWD performance and 9-speed automatic transmission. Nappa leather, Burmester audio, and AIRMATIC air suspension create a serene cabin, making every journey a refined experience.",
+    "specs": {
+      "engine": "4.0L Twin-Turbo V8",
+      "power": "469 HP",
+      "torque": "700 Nm",
+      "transmission": "9-Speed Auto",
+      "drivetrain": "RWD",
+      "0-100 km/h": "4.6 s",
+      "top speed": "250 km/h (limited)",
+      "weight": "2,045 kg",
+      "fuel type": "Petrol",
+      "seating": "4"
+    },
+    "features": ["Nappa leather", "Air suspension", "Burmester sound"],
+    "features-description": [
+      "Soft Nappa leather covers seats and trim for exceptional comfort.",
+      "AIRMATIC air suspension provides a smooth, controlled ride over any surface.",
+      "Burmester premium audio system delivers studio-quality acoustics."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=S-Class+Coupe+1"]
+  },
+  {
+    "id": "5",
+    "name": "Bentayga",
+    "brand": "Bentley",
+    "image": "https://images.unsplash.com/photo-1709245647374-a6ecf222ab8a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1079",
+    "price": 1200,
+    "category": "lux suv",
+    "description": "Opulent luxury SUV with powerful performance and handcrafted interior.",
+    "longdescription": "The Bentley Bentayga is a luxury SUV that blends high performance with exceptional comfort. Its 4.0L Twin-Turbo V8 generates 542 HP and 770 Nm of torque, accelerating to 100 km/h in 4.5 seconds. Hand-stitched leather, adaptive air suspension, and rear-seat luxury features ensure that every journey is indulgent, while AWD capability delivers confidence on all terrains.",
+    "specs": {
+      "engine": "4.0L Twin-Turbo V8",
+      "power": "542 HP",
+      "torque": "770 Nm",
+      "transmission": "8-Speed Auto",
+      "drivetrain": "AWD",
+      "0-100 km/h": "4.5 s",
+      "top speed": "290 km/h",
+      "weight": "2,435 kg",
+      "fuel type": "Petrol",
+      "seating": "5"
+    },
+    "features": ["Hand-stitched leather", "Adaptive air suspension", "Rear-seat luxury package"],
+    "features-description": [
+      "Cabin surfaces are wrapped in hand-stitched full-grain leather.",
+      "Adaptive air suspension balances comfort and control across terrains.",
+      "Rear-seat luxury package adds extra legroom, ventilation, and entertainment."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=Bentayga+1"]
+  },
+  {
+    "id": "6",
+    "name": "Panamera Turbo",
+    "brand": "Porsche",
+    "image": "https://www.topgear.com/sites/default/files/images/cars-road-test/carousel/2018/01/2e841e679fd98ddfd7bca486b6044ba8/29r9139-1.jpg",
+    "price": 720,
+    "category": "grand tourer",
+    "description": "High-performance four-door GT mixing sportscar dynamics with luxury.",
+    "longdescription": "The Porsche Panamera Turbo is a four-door GT delivering a thrilling mix of sports car performance and luxury. Its 4.0L Twin-Turbo V8 produces 550 HP and 770 Nm of torque, reaching 0-100 km/h in 3.8 seconds. Adaptive air suspension, sport seats, and rear-axle steering ensure precise handling, making it equally suited for long-distance comfort and high-speed excitement.",
+    "specs": {
+      "engine": "4.0L Twin-Turbo V8",
+      "power": "550 HP",
+      "torque": "770 Nm",
+      "transmission": "8-Speed PDK",
+      "drivetrain": "AWD",
+      "0-100 km/h": "3.8 s",
+      "top speed": "306 km/h",
+      "weight": "2,050 kg",
+      "fuel type": "Petrol",
+      "seating": "4"
+    },
+    "features": ["Adaptive air suspension", "Sport seats", "Rear-axle steering"],
+    "features-description": [
+      "Adaptive air suspension adjusts height and stiffness for comfort or sport.",
+      "Sport seats offer enhanced lateral support during spirited driving.",
+      "Rear-axle steering improves maneuverability and stability at speed."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=Panamera+1"]
+  },
+  {
+    "id": "7",
+    "name": "911 Turbo S",
+    "brand": "Porsche",
+    "image": "https://images-porsche.imgix.net/-/media/F7C7808B71544A0F86D6E6865EAEC622_9271FD70E524489FBE9574966452FD9A_CZ26W10OX0001-911-turbo-s-side-open-graph",
+    "price": 650,
+    "category": "sports car",
+    "description": "Top-tier 911 with extraordinary acceleration and refined tech.",
+    "longdescription": "The Porsche 911 Turbo S is the ultimate 911, offering blistering acceleration and refined technology. Powered by a 3.8L Twin-Turbo Flat-6 producing 640 HP, it sprints to 100 km/h in just 2.7 seconds. Active aerodynamics, carbon-ceramic brakes, and sport seats maximize driving precision and comfort, making it an exhilarating experience on both track and road.",
+    "specs": {
+      "engine": "3.8L Twin-Turbo Flat-6",
+      "power": "640 HP",
+      "torque": "800 Nm",
+      "transmission": "8-Speed PDK",
+      "drivetrain": "AWD",
+      "0-100 km/h": "2.7 s",
+      "top speed": "330 km/h",
+      "weight": "1,640 kg",
+      "fuel type": "Petrol",
+      "seating": "2+2"
+    },
+    "features": ["Active aerodynamics", "Carbon-ceramic brakes", "Sport seats"],
+    "features-description": [
+      "Active aerodynamic flaps and spoilers enhance grip and stability dynamically.",
+      "Carbon-ceramic brakes deliver fade-free stopping performance under extreme conditions.",
+      "Sport seats provide precision control and long-distance comfort."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=911+Turbo+S+1"]
+  },
+  {
+    "id": "8",
+    "name": "Aventador SVJ",
+    "brand": "Lamborghini",
+    "image": "https://www.digitaltrends.com/wp-content/uploads/2020/01/lamborghini_aventador_svj_roadster_1.jpg?resize=1200%2C720&p=1",
+    "price": 3500,
+    "category": "Super car",
+    "description": "Extreme V12 supercar focused on track-capable performance and aerodynamics.",
+    "longdescription": "The Lamborghini Aventador SVJ is a V12 supercar designed for maximum track performance. Its 6.5L naturally aspirated engine produces 770 HP, accelerating to 100 km/h in 2.8 seconds. Advanced aerodynamics, lightweight forged wheels, and race-spec seats ensure precise handling and stability, offering an uncompromising supercar experience for thrill-seekers.",
+    "specs": {
+      "engine": "6.5L Naturally Aspirated V12",
+      "power": "770 HP",
+      "torque": "720 Nm",
+      "transmission": "7-Speed ISR",
+      "drivetrain": "AWD",
+      "0-100 km/h": "2.8 s",
+      "top speed": "350 km/h",
+      "weight": "1,525 kg",
+      "fuel type": "Petrol",
+      "seating": "2"
+    },
+    "features": ["Aero package", "Lightweight forged wheels", "Race seats"],
+    "features-description": [
+      "Advanced aerodynamic kit increases downforce for better cornering grip.",
+      "Forged wheels reduce rotational mass for faster acceleration and braking.",
+      "Fixed carbon-fiber race seats provide maximum driver support on track."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=Aventador+SVJ+1"]
+  },
+  {
+    "id": "9",
+    "name": "Roma",
+    "brand": "Ferrari",
+    "image": "https://www.exoticcarhacks.com/wp-content/uploads/2025/01/Used-2024-Ferrari-Roma-w-FULL-Stealth-PPF-Custom-Specs-Carbon-Driver-Zone-1731015795.jpg",
+    "price": 1100,
+    "category": "grand tourer",
+    "description": "Elegant two-seater GT with a focus on grand touring and sophisticated design.",
+    "longdescription": "The Ferrari Roma is an elegant two-seater GT that combines sophisticated design with impressive performance. Its 3.9L Twin-Turbo V8 produces 612 HP and 760 Nm of torque, achieving 0-100 km/h in 3.4 seconds. With premium leather, advanced infotainment, and balanced suspension tuning, the Roma delivers both comfort and exhilarating driving pleasure for long-distance journeys.",
+    "specs": {
+      "engine": "3.9L Twin-Turbo V8",
+      "power": "612 HP",
+      "torque": "760 Nm",
+      "transmission": "8-Speed DCT",
+      "drivetrain": "RWD",
+      "0-100 km/h": "3.4 s",
+      "top speed": "320 km/h",
+      "weight": "1,570 kg",
+      "fuel type": "Petrol",
+      "seating": "2"
+    },
+    "features": ["Gran Turismo comfort", "Premium leather", "Advanced infotainment"],
+    "features-description": [
+      "Designed for long-distance comfort with balanced suspension tuning.",
+      "Cabin wrapped in top-grade Italian leather with handcrafted detailing.",
+      "High-resolution infotainment system integrates navigation and connectivity."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=Roma+1"]
+  },
+  {
+    "id": "10",
+    "name": "AMG GT R Pro",
+    "brand": "Mercedes-Benz",
+    "image": "https://images.pistonheads.com/nimg/49130/blobid8.jpg",
+    "price": 1050,
+    "category": "lux coupe",
+    "description": "Performance-focused coupe with track-tuned dynamics and luxury finishes.",
+    "longdescription": "The Mercedes-AMG GT R Pro is a track-oriented luxury coupe built for precision and speed. Its 4.0L Twin-Turbo V8 delivers 577 HP, reaching 100 km/h in 3.6 seconds. With manually adjustable suspension, performance aero, and track-focused components, it combines race-ready dynamics with premium AMG luxury, providing an exhilarating driving experience.",
+    "specs": {
+      "engine": "4.0L Twin-Turbo V8",
+      "power": "577 HP",
+      "torque": "700 Nm",
+      "transmission": "7-Speed DCT",
+      "drivetrain": "RWD",
+      "0-100 km/h": "3.6 s",
+      "top speed": "318 km/h",
+      "weight": "1,575 kg",
+      "fuel type": "Petrol",
+      "seating": "2"
+    },
+    "features": ["Track package", "Adjustable suspension", "Performance aero"],
+    "features-description": [
+      "Track package includes roll cage, lightweight components, and telemetry tools.",
+      "Manually adjustable coilover suspension fine-tunes handling precision.",
+      "Active aerodynamic aids improve high-speed stability and cornering."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=AMG+GT+R+Pro+1"]
+  },
+  {
+    "id": "11",
+    "name": "Continental GT",
+    "brand": "Bentley",
+    "image": "https://media.wired.com/photos/59a7073e35e1e75876739dd0/3:2/w_2560%2Cc_limit/Bentley-Art.jpg",
+    "price": 1300,
+    "category": "lux coupe",
+    "description": "Handcrafted grand tourer combining wild power with sumptuous luxury.",
+    "longdescription": "The Bentley Continental GT is a handcrafted grand tourer that blends immense power with exquisite luxury. Its 6.0L Twin-Turbo W12 engine produces 626 HP and 900 Nm of torque, hitting 100 km/h in 3.7 seconds. The cabin features premium leather, wood, and metal detailing, while adaptive chassis and premium sound systems ensure a sublime driving experience on both highways and winding roads.",
+    "specs": {
+      "engine": "6.0L Twin-Turbo W12",
+      "power": "626 HP",
+      "torque": "900 Nm",
+      "transmission": "8-Speed Automatic",
+      "drivetrain": "AWD",
+      "0-100 km/h": "3.7 s",
+      "top speed": "333 km/h",
+      "weight": "2,244 kg",
+      "fuel type": "Petrol",
+      "seating": "4"
+    },
+    "features": ["Luxury interior", "Adaptive chassis", "Premium sound system"],
+    "features-description": [
+      "Interior handcrafted with fine leather, wood, and metal detailing.",
+      "Adaptive chassis continuously monitors and adjusts ride dynamics.",
+      "High-end sound system delivers rich, immersive in-cabin acoustics."
+    ],
+    "gallery": ["https://via.placeholder.com/1200x800?text=Continental+GT+1"]
+  }
+]

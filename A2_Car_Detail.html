@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="A2_Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="overlay hide" id="login-overlay">
+        <div class="login-mode">
+            <div class="dialog-header">
+                <h2 class="dialog-title">Choose Login Type</h2>
+            </div>
+            <button class="dialog-close" id="closeDialog" onclick="setLogin()">&times;</button>
+            <div class="login-type">
+                <button class="customer-login">
+                    <svg data-lucide="user"></svg>
+                    Customer Login
+                </button>
+                <button class="Employee-Login" onclick="location.href='A2_Employee_Landing.html';">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user h-4 w-4 mr-1"
+                        data-source-location="src/components/pages/HomePage.tsx:118:22">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Employee Login
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="Logo">
+                AZone
+            </a>
+            <nav class="nav-container">
+                <a href="index.html" class="nav-link notFocus">Home</a>
+                <a href="#" class="nav-link notFocus">About Us</a>
+                <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+                <a href="#" class="nav-link notFocus">Contact Us</a>
+                <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link notFocus hide">Dashboard</a>
+                <button class="login" onclick="setLogin()">Login</button>
+                <div class="is-login hide">
+                    <p class="login-message">Welcome, username</p>
+                    <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+                </div>
+            </nav>
+            <button id="hamburger">
+                <div id="hamburgerDiv" class="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div id="hamburger-menu-container" class="hamburger-menu-inactive">
+            <a href="index.html" class="nav-link notFocus">Home</a>
+            <a href="#" class="nav-link notFocus">About Us</a>
+            <a href="A2_Car_Showcase.html" class="nav-link notFocus">Our Fleet</a>
+            <a href="#" class="nav-link notFocus">Contact Us</a>
+            <a href="A2_Rental_Dashboard.html" class="rental-dashboard-acess nav-link notFocus hide">Dashboard</a>
+            <button class="login" onclick="setLogin()">Login</button>
+            <div class="is-login hide">
+                <p class="login-message">Welcome, username</p>
+                <button class="sign-out-btn" onclick="logout()">Sign Out</button>
+            </div>
+
+        </div>
+    </header>
+    <section class="back-section fade-in">
+        <div class="back-container">
+            <a href="A2_Car_Showcase.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-left mr-2 h-4 w-4"
+                    data-source-location="src/components/pages/CarDetailPage.tsx:166:10">
+                    <path d="m12 19-7-7 7-7"></path>
+                    <path d="M19 12H5"></path>
+                </svg>
+                Back to Collection
+            </a>
+        </div>
+    </section>
+    <section class="car-detail-hero">
+        <div class="car-detail-container">
+            <div class="car-detail-image fade-in slideInLeft">
+                <img id="carImage" class="car-detail-img"
+                    src="https://static.wixstatic.com/media/9519c4_03da888337184f9cb069bab6e449e473~mv2.png?originWidth=768&amp;originHeight=576"
+                    alt="Lamborghini Aventador SVJ">
+            </div>
+            <div class="car-detail-content fade-in">
+                <div class="car-detail-text">
+                    <div class="car-details">
+                        <p id="car-brand">Porsche</p>
+                        <h1 id="car-name">911 GT3 RS</h1>
+                    </div>
+                    <div class="car-detail-divider"></div>
+                    <p id="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                        tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="car-detail-footer">
+                        <p id="car-price">$1000/day</p>
+                        <button class="btn" onclick="reserveCar()">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="vehicle-specs">
+        <div class="vechicle-specs-container">
+            <div class="vechicle-spec-header">
+                <h2 class="vechicle-spec-title">Vehicle Specifications</h2>
+                <div class="vechicle-spec-divider"></div>
+            </div>
+            <div class="vechicle-spec-grid">
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                        <i data-lucide ="Car"></i> 
+                        <p>Engine</p>
+                    </div>
+                    <p id="car-spec-engine">engine specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--power-->
+                        <i data-lucide="zap"></i>
+                        <p>Power</p>
+                    </div>
+                    <p id="car-spec-power">power specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--torque-->
+                        <i data-lucide="wrench"></i>
+                        <p>Torque</p>
+                    </div>
+                    <p id="car-spec-torque">Torque specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                        <i data-lucide="settings"></i>
+                        <p>Transmission</p>
+                    </div>
+                    <p id="car-spec-transmission">transmission specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                        <i data-lucide="clock"></i>
+                        <p>0-100 km/h</p>
+                    </div>
+                    <p id="car-spec-speed">speed specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                        <i data-lucide="gauge"></i>
+                        <p>top speed</p>
+                    </div>
+                    <p id="car-spec-top-speed">top speed specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                        <i data-lucide="anvil"></i>
+                        <p>weight</p>
+                    </div>
+                    <p id="car-spec-weight">weight specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                        <i data-lucide="fuel"></i>
+                        <p>fuel</p>
+                    </div>
+                    <p id="car-spec-fuel">fuel specs here</p>
+                </div>
+                <div class="vechicle-spec-card">
+                    <div class="vechicle-spec-card-heading">
+                        <!--engine-->
+                       <i data-lucide="users"></i>
+                        <p>seating</p>
+                    </div>
+                    <p id="car-spec-seating">seating specs here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="spec-bottom-border"></div>
+    <section class="vehicle-feature-section">
+        <div class="vechicle-specs-container">
+            <div class="vechicle-spec-header">
+                <h2 class="vechicle-spec-title">Premium Features</h2>
+                <div class="vechicle-spec-divider"></div>
+            </div>
+            <div class="vechicle-feature-grid animateOnScroll">
+                <div class="vechicle-feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shield h-5 w-5 text-primary/60 mt-1 flex-shrink-0"
+                        data-source-location="src/components/pages/CarDetailPage.tsx:344:14">
+                        <path
+                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                        </path>
+                    </svg>
+                    <div class="feature-text">
+                        <h4 class="feature-text-title">FEATURE</h4>
+                        <p class="feature-description">car-description</p>
+                    </div>
+                </div>
+                <div class="vechicle-feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-settings h-5 w-5 text-primary/60 mt-1 flex-shrink-0"
+                        data-source-location="src/components/pages/CarDetailPage.tsx:352:14">
+                        <path
+                            d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                        </path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <div class="feature-text">
+                        <h4 class="feature-text-title">FEATURE</h4>
+                        <p class="feature-description">car-description</p>
+                    </div>
+                </div>
+                <div class="vechicle-feature-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-zap h-5 w-5 text-primary/60 mt-1 flex-shrink-0"
+                        data-source-location="src/components/pages/CarDetailPage.tsx:360:14">
+                        <path
+                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+                        </path>
+                    </svg>
+                    <div class="feature-text">
+                        <h4 class="feature-text-title">FEATURE</h4>
+                        <p class="feature-description">car-description</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-cta animateOnScroll">
+                <h2>Ready to Experience Excellence?</h2>
+                <p id="reserve-text">Reserve your Lamborghini Huracan Evo today and discover what true automotive luxury
+                    feels like.</p>
+                <div class="footer-cta">
+                    <button class="reserve-car-btn" onclick="reserveCar()">Reserve This Vehicle</button>
+                    <button class="contact-us-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone mr-2 h-5 w-5"
+                            data-source-location="src/components/pages/CarDetailPage.tsx:429:16">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>Contact Us</button>
+                </div>
+            </div>
+            <div class="footer-content animateOnScroll">
+                <div class="footer-section">
+                    <h3 class="footer-title">AZOOM</h3>
+                    <p class="footer-description">
+                        Redefining luxury car rental with unparalleled service and the world's finest supercars.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Supercar Rental</a></li>
+                        <li><a href="index.html" class="footer-link">Track Day Experiences</a></li>
+                        <li><a href="index.html" class="footer-link">Event Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="index.html" class="footer-link">Rental Terms</a></li>
+                        <li><a href="index.html" class="footer-link">Insurance Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+65 9123 4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span class="contact-text">sales@azoom.sg</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">14 Greenmead Ave, Singapore 289406</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom animateOnScroll">
+                <p class="footer-copyright">
+                    © 2025 AZoom Luxury Rentals. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="initLucide.js"></script>
+    <script src="animate.js"></script>
+    <script src="common.js"></script>
+    <script src="A2_Car_Detail_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="user_landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="login-ctn">
+            <div class="login-header" id="user-login-title">
+                <h1 id="login-big">Welcome Back</h1>
+                <p id="login-small">Sign in to access your luxury car rentals</p>
+            </div>
+            <form name="myForm" class="login-cta" onsubmit="handleSubmit(event)">
+                <div class="input-field-ctn">
+                    <div class="input-field">
+                        <p>Email Address/Name</p>
+                        <div class="input-ctn">
+                            <i class="input-symbol" data-lucide="mail"></i>
+                            <input name="uname" type="email" required id="email">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <p>Password</p>
+                        <div class="input-ctn">
+                            <i class="input-symbol" data-lucide="lock"></i>
+                            <div class="password-input-ctn">
+                                <input name="pwname" type="password" required class="input-pw" id="input-pw">
+                                <div id="click-container">
+                                    <i data-lucide="eye" id="show-pw" class=""></i>
+                                    <i data-lucide="eye-off" class="hide" id="hide-pw"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="user-action-btn" id="action-btn" >Sign in</button>
+            </form>
+            <div class="extra-option">
+                <a href="#" onclick="toggleRegister()" id="register" class="register">Don't have an account? Create
+                    one</a>
+                <a class="user-back" href="index.html">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="common.js"></script>
+<script src="initLucide.js"></script>
+<script src="user_landing.js"></script>
+
+</html>
