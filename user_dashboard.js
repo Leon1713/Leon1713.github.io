@@ -81,7 +81,7 @@ function initPage() {
     var counter = 0;
     var mCounter = 0;
     for (const data of userData) {
-        if (data.uname != sessionStorage.getItem("user")) {
+        if (data.uname != sessionStorage.getItem("user").substring(0, sessionStorage.getItem("user").indexOf("@"))) {
             ++counter;
             continue;
         }
@@ -200,4 +200,5 @@ function removeStatus() {
         status.classList.remove("booking-complete")
         status.classList.remove("booking-cancel")
     }
+
 }
