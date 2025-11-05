@@ -42,7 +42,7 @@ function writeToDatabase(){
     var dayCount = document.getElementById("duration").innerText;
     var car = getCarIdFromUrl();
     var bookId = generateBookingNumber();
-    var status="Active";
+    var status="Booked";
     var dateStart = document.getElementById("startDate").value.toString();
     var dateEnd=document.getElementById("endDate").value.toString();
     var pickupAdd =document.getElementById("pickupLocation").value.toString();
@@ -79,4 +79,5 @@ function writeToDatabase(){
 function getCarIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('id') || '0'; // Default to car 0 if no ID provided
+
 }
